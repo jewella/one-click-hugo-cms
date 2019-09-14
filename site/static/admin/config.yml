@@ -9,7 +9,6 @@ collections: # A list of collections the CMS should be able to edit
     label: "Site Options"
     editor:
       preview: false
-    create: true
     files:
       - label: "Primary Menu"
         name: "primary-nav"
