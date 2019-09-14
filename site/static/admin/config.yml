@@ -14,14 +14,18 @@ collections: # A list of collections the CMS should be able to edit
       - label: "Primary Menu"
         name: "primary-nav"
         file: "site/content/primary-nav/_index.md"
-        widget: "list"
         fields:
-          - {label: "Display Text", name: "displayText", widget: "string"}
-          - {label: "URL", name: "url", widget: "string"}
-          - label: "Item Type"
-            name: "Item Type"
-            widget: "select"
-            options: ["Link", "Button"]
+          - label: "Menu Items"
+            label_singular: "Menu Item"
+            name: "topLevelItems"
+            widget: "list"
+            fields:
+              - {label: "Display Text", name: "displayText", widget: "string"}
+              - {label: "URL", name: "url", widget: "string"}
+              - label: "Item Type"
+                name: "Item Type"
+                widget: "select"
+                options: ["Link", "Button"]
   - name: "post" # Used in routes, ie.: /admin/collections/:slug/edit
     label: "Post" # Used in the UI, ie.: "New Post"
     folder: "site/content/post" # The path to the folder where the documents are stored
