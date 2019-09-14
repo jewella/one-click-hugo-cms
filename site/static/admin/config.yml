@@ -7,17 +7,14 @@ public_folder: "img"
 collections: # A list of collections the CMS should be able to edit
   - label: "Configuration"
     name: "config"
-    editor:
-      preview: false
     files:
       - label: "Menus"
-        name: "menus"
-        file: "site/config/_default/menus.toml"
+        name: "menu"
+        file: "site/config/_default/menus.yml"
         fields:
           - label: "Main Menu"
             label_singular: "Main Menu"
             name: "main"
-            widget: "object"
             fields:
               - {label: "Name", name: "name", widget: "string"}
               - {label: "Identifier", name: "identifier", widget: "string"}
